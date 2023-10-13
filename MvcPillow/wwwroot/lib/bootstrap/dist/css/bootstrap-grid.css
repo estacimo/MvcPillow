@@ -5,8 +5,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 html {
-  box-sizing: border-box;
-  -ms-overflow-style: scrollbar;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
 }
 
 *,

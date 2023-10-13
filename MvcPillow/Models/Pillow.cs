@@ -27,7 +27,7 @@ namespace MvcPillow.Models
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
         [Column(TypeName = "decimal(18, 2)")] 
-        [Display(Name = "Customer Rating"), Range(1.0, 5.0), Required]
+        [Display(Name = "Customer Rating"), Range(1.0, 5.0)]
         public decimal CustomerRating { get; set; }
     }
 }

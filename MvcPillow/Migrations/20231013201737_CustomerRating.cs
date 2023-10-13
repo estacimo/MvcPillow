@@ -72,8 +72,7 @@ namespace MvcPillow.Data.Migrations
                 name: "CustomerRating",
                 table: "Pillow",
                 type: "decimal(18, 2)",
-                nullable: false,
-                defaultValue: 0m);
+                nullable: false);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

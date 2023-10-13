@@ -23,7 +23,7 @@ namespace MvcPillow.Models
                 context.Pillow.AddRange(  // at least 10 different pillows to display
                     new Pillow
                     {
-                        Image = "",
+                        Image = "../wwwroot/img/whitepillow.jpg",
                         Size = "Standard",
                         Purpose = "Bed Pillow",
                         Density = "Soft",
