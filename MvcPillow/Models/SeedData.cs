@@ -30,7 +30,8 @@ namespace MvcPillow.Models
                         Color = "White",
                         Shape = "Rectangular",
                         Material = "Memory Foam",
-                        Price = 24.99M
+                        Price = 24.99M,
+                        CustomerRating = 4.5M
                     },
 
                     new Pillow
@@ -42,7 +43,8 @@ namespace MvcPillow.Models
                         Color = "Yellow",
                         Shape = "Custom",
                         Material = "Memory Foam",
-                        Price = 18.99M
+                        Price = 18.99M,
+                        CustomerRating = 4.7M
                     },
 
                     new Pillow
@@ -54,7 +56,8 @@ namespace MvcPillow.Models
                         Color = "Blue",
                         Shape = "Rectangular",
                         Material = "Down",
-                        Price = 14.99M
+                        Price = 14.99M,
+                        CustomerRating = 4.2M
                     },
 
                     new Pillow
@@ -66,7 +69,8 @@ namespace MvcPillow.Models
                         Color = "Red",
                         Shape = "Rectangular",
                         Material = "Feathers",
-                        Price = 21.99M
+                        Price = 21.99M,
+                        CustomerRating = 4.6M
                     },
 
                     new Pillow
@@ -78,7 +82,8 @@ namespace MvcPillow.Models
                         Color = "Green",
                         Shape = "Circular",
                         Material = "Wool",
-                        Price = 13.99M
+                        Price = 13.99M,
+                        CustomerRating = 4.0M
                     },
 
                     new Pillow
@@ -90,7 +95,8 @@ namespace MvcPillow.Models
                         Color = "Orange",
                         Shape = "Rectangular",
                         Material = "Wool",
-                        Price = 34.99M
+                        Price = 34.99M,
+                        CustomerRating = 4.3M
                     },
 
                     new Pillow
@@ -102,7 +108,8 @@ namespace MvcPillow.Models
                         Color = "Custom",
                         Shape = "Square",
                         Material = "Wool",
-                        Price = 6.99M
+                        Price = 6.99M,
+                        CustomerRating = 5.0M
                     },
 
                     new Pillow
@@ -114,7 +121,8 @@ namespace MvcPillow.Models
                         Color = "Pink",
                         Shape = "Custom",
                         Material = "Down",
-                        Price = 4.99M
+                        Price = 4.99M,
+                        CustomerRating = 4.8M
                     },
 
                     new Pillow
@@ -126,7 +134,8 @@ namespace MvcPillow.Models
                         Color = "Beige",
                         Shape = "Rectangular",
                         Material = "Latex",
-                        Price = 24.99M
+                        Price = 24.99M,
+                        CustomerRating = 4.5M
                     },
                     new Pillow
                     {
@@ -137,7 +146,8 @@ namespace MvcPillow.Models
                         Color = "Black",
                         Shape = "Custom",
                         Material = "Memory Foam",
-                        Price = 12.99M
+                        Price = 12.99M,
+                        CustomerRating = 3.2M
                     }
                 );
                 context.SaveChanges();

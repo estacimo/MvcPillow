@@ -55,3 +55,20 @@ form tag to include a search by Color and Size
 
 1518
 Added validation rules to the pillow model
+
+1525
+Just realized I didn't add the review property...
+Time to do that, I guess
+
+1530
+Added CustomerRating property with a range from 1.0 to 5.0
+Updated the Bind in PillowsController.cs to include CustomerRating
+Added a CustomerRating field in Views/Pillows/Index.cshtml
+
+1539
+Updated the rest of the CRUD pages to include CustomerRating fields
+Updated SeedData.cs and added ratings for each product
+
+1546
+Added the CustomerRating migration and updated the database
+Tested the build. Build was sucessful
