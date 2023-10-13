@@ -1,6 +1,6 @@
 ﻿Application Name: MvcPillow
 Application Author: Esta Cimo
-Creation Date: 2023-10-13
+Creation Date: 2023-10-13 1208 ISO
 
 Created the MvcPillow application as well as the GitHub repository for it
 
@@ -16,3 +16,8 @@ In the Views/Shared/_Layout.cshtml file, added the About links
 Updated HomeController.cs to include the About() method
 I will return to update the About page at a later time
 
+0158
+Added Pillow.cs class to the Models folder
+
+0213
+Added the properties (Id, Size, Purpose, Density, Color, Shape, Material, Price)
