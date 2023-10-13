@@ -41,3 +41,7 @@ Update-Database
 Tested build. Build failed
 Changed asp-controller and asp-action attributes for the MvcPillow anchor tag
 Retested build. Build running successfully
+
+1433
+Seeded the database
+Added seed initializer 
