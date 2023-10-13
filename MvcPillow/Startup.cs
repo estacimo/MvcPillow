@@ -28,13 +28,11 @@ namespace MvcPillow
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MvcPillowContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("MvcPillowConnection"))); //from DefaultConnection to MvcPillowConnection 
-           
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<MvcPillowContext>();
-           
             services.AddControllersWithViews();
-           
             services.AddRazorPages();
         }
 

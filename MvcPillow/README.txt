@@ -24,6 +24,3 @@ Added the properties (Id, Size, Purpose, Density, Color, Shape, Material, Price)
 
 1324
 Updated the Data folder and the MvcPillowContext.cs file
-
-1330
-Made changes to Startup.ConfigureServices and added a connection string to appsettings.json
