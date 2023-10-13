@@ -27,3 +27,17 @@ Updated the Data folder and the MvcPillowContext.cs file
 
 1354
 Made changes to Startup.ConfigureServices and added a connection string in the appsettings.json file
+
+1401
+Added a new scaffolded item which created a pillows controller Controllers/PillowsController.cs
+as well as the Razor view files Create, Delete, Details, Edit and Index in Views/Pillows
+
+1404
+Ran the following commands in the PMC: 
+Add-Migration InitialCreate
+Update-Database
+
+1405
+Tested build. Build failed
+Changed asp-controller and asp-action attributes for the MvcPillow anchor tag
+Retested build. Build running successfully
