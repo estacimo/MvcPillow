@@ -21,3 +21,6 @@ Added Pillow.cs class to the Models folder
 
 0213
 Added the properties (Id, Size, Purpose, Density, Color, Shape, Material, Price)
+
+1324
+Updated the Data folder and the MvcPillowContext.cs file
