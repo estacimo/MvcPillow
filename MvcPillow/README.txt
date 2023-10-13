@@ -52,3 +52,6 @@ Added PillowSizeViewModel.cs class to the Models folder
 1454
 Updated the Index method in the PillowsController.cs file and the Index.cshtml 
 form tag to include a search by Color and Size
+
+1518
+Added validation rules to the pillow model
