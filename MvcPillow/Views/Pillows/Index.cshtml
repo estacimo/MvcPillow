@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MvcPillow.Models.Pillow>
+﻿@model MvcPillow.Models.PillowSizeViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -9,69 +9,82 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+<form asp-controller="Pillows" asp-action="Index">
+    <p>
+        <select asp-for="PillowSize" asp-items="Model.Sizes">
+            <option value="">All</option>
+        </select>
+
+        Color: <input type="text" name="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Image)
+                @Html.DisplayNameFor(model => model.Pillows[0].Image) <!-- include lambda expression -->
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Size)
+                @Html.DisplayNameFor(model => model.Pillows[0].Size)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Purpose)
+                @Html.DisplayNameFor(model => model.Pillows[0].Purpose)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Density)
+                @Html.DisplayNameFor(model => model.Pillows[0].Density)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Color)
+                @Html.DisplayNameFor(model => model.Pillows[0].Color)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Shape)
+                @Html.DisplayNameFor(model => model.Pillows[0].Shape)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Material)
+                @Html.DisplayNameFor(model => model.Pillows[0].Material)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @Html.DisplayNameFor(model => model.Pillows[0].Price)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Image)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Size)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Purpose)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Density)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Color)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Shape)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Material)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Pillows)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Image)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Size)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Purpose)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Density)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Color)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Shape)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Material)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

@@ -20,9 +20,33 @@ namespace MvcPillow.Controllers
         }
 
         // GET: Pillows
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string pillowSize, string searchString)
         {
-            return View(await _context.Pillow.ToListAsync());
+            // Use LINQ to get list of genres.
+            IQueryable<string> genreQuery = from m in _context.Pillow
+                                            orderby m.Size
+                                            select m.Size;
+
+            var pillows = from m in _context.Pillow
+                         select m;
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                pillows = pillows.Where(s => s.Color.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(pillowSize))
+            {
+                pillows = pillows.Where(x => x.Size == pillowSize);
+            }
+
+            var pillowSizeVM = new PillowSizeViewModel
+            {
+                Sizes = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                Pillows = await pillows.ToListAsync()
+            };
+
+            return View(pillowSizeVM);
         }
 
         // GET: Pillows/Details/5

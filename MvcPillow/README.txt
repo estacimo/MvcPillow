@@ -45,3 +45,10 @@ Retested build. Build running successfully
 1433
 Seeded the database
 Added seed initializer 
+
+1443
+Added PillowSizeViewModel.cs class to the Models folder
+
+1454
+Updated the Index method in the PillowsController.cs file and the Index.cshtml 
+form tag to include a search by Color and Size
